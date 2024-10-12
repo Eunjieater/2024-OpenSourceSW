@@ -1,4 +1,13 @@
-x = int(input('첫번째 인자를 입력하세요: '))
-y = int(input('두번째 인자를 입력하세요: '))
-print(f'{x} + {y} = {x + y}')
-print('프로그램을 종료합니다')
+def week6(a, b, max):
+    i = 0
+    result = a*a*max+b
+    while i <= max:
+        week6(a, b, i)
+        i = i + 1
+    return (f'{a}x{a}x{max} + {b} = {result}')
+
+a = int(input('a: '))
+b = int(input('b: '))
+max = int(input('Max: '))
+week6(a, b, max)
+
